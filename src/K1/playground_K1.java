@@ -1,9 +1,6 @@
 package K1;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.BitSet;
+import java.util.*;
 
 public class playground_K1 {
     public static void main(String[] args) {
@@ -55,5 +52,12 @@ public class playground_K1 {
         }
         System.out.println("Decrypt: " + Arrays.toString(decryBytes));
         System.out.println("----------------------");
+        //TODO STACK
+        Stack<Integer> a = new Stack<>();
+        a.push(1);
+        a.push(5);
+        a.push(3);
+        System.out.println(a.pop());
+        System.out.println(a);
     }
 }
