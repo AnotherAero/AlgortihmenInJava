@@ -18,9 +18,11 @@ public class playground_K1 {
         System.out.println("----------------------");
         //TODO BITSET
         //https://docs.oracle.com/javase/7/docs/api/java/util/BitSet.html
-        BitSet bit = new BitSet(1);
-        bit.set(0,true);
-        bit.set(2,true);
+        BitSetExtended bit = new BitSetExtended(3);
+        bit.set(0,false);
+        bit.set(1,true);
+        bit.set(4,true);
+        System.out.println(bit.getLength());
         System.out.println(bit);
         System.out.println("----------------------");
         //TODO BYTE[]

@@ -4,12 +4,13 @@ import java.util.Stack;
 
 public class U5 {
     public static void main(String[] args) {
-        Hanoi h = new Hanoi(5);
+        Hanoi h = new Hanoi(4);
         h.solve();
         System.out.println(h);
     }
 }
 //https://de.khanacademy.org/computing/computer-science/algorithms/towers-of-hanoi/a/towers-of-hanoi-continued
+//https://youtu.be/YstLjLCGmgg
 class Hanoi{
     private final int numDiscs;
     public final Stack<Integer> towerA = new Stack<>();
@@ -29,9 +30,10 @@ class Hanoi{
         if (n == 1){
             C.push(A.pop());
         }else {
-            move(A,B,C,n-1);
-            move(A,C,B,1);
-            move(B,C,A,n-1);
+            move(A,B,C,n-1);//n-1 Scheiben von A nach B mit C als Zwischenschritt
+            move(A,C,B,1);//Unterste SCheibe von A nach C
+            move(B,C,A,n-1);//n-1 Schiben von B nach C mit A als Zwischenschritt
+            //Diese 3 Schritte sind wichtig. Diese werden hier nur abstrakt betrachtet
         }
     }
     public String toString(){
